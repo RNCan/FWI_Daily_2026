@@ -1,0 +1,218 @@
+ESQUIMALT+HARBOUR (AES: 1012710, POR: 1994–2026):
+- FWI broke the daily record (11.7 > 8.6)
+
+SHERINGHAM+POINT (AES: 1017254, POR: 1994–2026):
+- ▲ DMC broke the monthly record (39 > 37.2)
+- BUI broke the daily record (44.3 > 28.7)
+- DMC broke the daily record (39 > 23.3)
+- FFMC broke the daily record (88.2 > 85)
+
+VICTORIA+UNIVERSITY+CS (AES: 1018598, POR: 1994–2026):
+- FWI broke the daily record (13 > 11.2)
+
+BALLENAS+ISLAND (AES: 1020590, POR: 1994–2026):
+- BUI broke the daily record (40.5 > 35.1)
+- DMC broke the daily record (30.4 > 27.5)
+
+SISTERS+ISLAND (AES: 1027403, POR: 1994–2026):
+- DC broke the daily record (138.9 > 137.2)
+
+ESTEVAN+POINT+CS (AES: 1032731, POR: 1994–2026):
+- DC broke the daily record (100.7 > 87.3)
+
+PORT+ALBERNI+AUT (AES: 1036B06, POR: 1994–2026):
+- BUI broke the daily record (64.2 > 55.5)
+- DMC broke the daily record (64.3 > 55.5)
+
+SOLANDER+ISLAND+AUT (AES: 1037553, POR: 1994–2026):
+- BUI broke the daily record (13.8 > 11.5)
+- DC broke the daily record (81.1 > 63.7)
+- DMC broke the daily record (8.8 > 7.7)
+
+HOWE+SOUND+-+PAM+ROCKS (AES: 10459NN, POR: 1994–2026):
+- BUI broke the daily record (40.5 > 32.1)
+- DC broke the daily record (145.2 > 129.2)
+- DMC broke the daily record (31 > 26.5)
+
+SQUAMISH+AIRPORT (AES: 10476F0, POR: 1983–2026):
+- ▲ BUI broke the monthly record (80.9 > 79.2)
+- ▲ DMC broke the monthly record (81.2 > 74.5)
+- BUI broke the daily record (80.9 > 56.1)
+- DC broke the daily record (143.5 > 141.9)
+- DMC broke the daily record (81.2 > 56.1)
+- FWI broke the daily record (29.5 > 22.5)
+- ISI broke the daily record (10.6 > 9.4)
+
+HERBERT+ISLAND+AUT (AES: 1063461, POR: 1994–2026):
+- BUI broke the daily record (16.1 > 15.7)
+- DC broke the daily record (92.3 > 82)
+- DMC tied the daily record (10.3)
+
+BURNS+LAKE+DECKER+LAKE (AES: 1091174, POR: 1991–2026):
+- DMC broke the daily record (67 > 53.7)
+
+WILLIAMS+LAKE+A (AES: 1098940, POR: 1961–2026):
+- ▲ BUI broke the monthly record (106.5 > 81.8)
+- ▲ DC broke the monthly record (350.2 > 323.9)
+- ▲ DMC broke the monthly record (85.9 > 81.9)
+- BUI broke the daily record (106.5 > 75.3)
+- DC broke the daily record (350.2 > 280.7)
+- DMC broke the daily record (85.9 > 56.7)
+
+AGASSIZ+CS (AES: 1100119, POR: 1994–2026):
+- BUI broke the daily record (64.3 > 41)
+- DC broke the daily record (145.3 > 117.7)
+- DMC broke the daily record (64.3 > 40.4)
+- FWI broke the daily record (17.7 > 16.7)
+
+VANCOUVER+HARBOUR+CS (AES: 1108446, POR: 1978–2026):
+- BUI broke the daily record (46.7 > 30.7)
+- DC broke the daily record (141.6 > 115.1)
+- DMC broke the daily record (39.7 > 26.8)
+- FWI broke the daily record (12.7 > 8.9)
+- ISI broke the daily record (5 > 4.5)
+
+WEST+VANCOUVER+AUT (AES: 1108824, POR: 1994–2026):
+- BUI broke the daily record (51.8 > 43.8)
+- DC broke the daily record (144.1 > 124.9)
+- DMC broke the daily record (47 > 39)
+- FFMC broke the daily record (89.9 > 89)
+- FWI broke the daily record (13 > 10.5)
+- ISI broke the daily record (4.8 > 4.1)
+
+WHITE+ROCK+CAMPBELL+SCIENTIFIC (AES: 1108910, POR: 1994–2026):
+- BUI broke the daily record (42.6 > 37.9)
+- DMC broke the daily record (37.8 > 30.1)
+- FFMC broke the daily record (87.6 > 86.4)
+- FWI broke the daily record (11.2 > 6.7)
+- ISI broke the daily record (4.5 > 3.4)
+
+OSOYOOS+CS (AES: 1125852, POR: 1994–2026):
+- ▲ BUI broke the monthly record (162.6 > 159.3)
+- BUI broke the daily record (162.6 > 148.3)
+- DMC broke the daily record (141.1 > 128.8)
+
+SUMMERLAND+CS (AES: 112G8L1, POR: 1994–2026):
+- ▲ BUI broke the monthly record (138.4 > 133)
+- ▲ DMC broke the monthly record (108.2 > 104.8)
+- BUI broke the daily record (138.4 > 116.5)
+- DC broke the daily record (480.7 > 475.9)
+- DMC broke the daily record (108.2 > 93.3)
+
+ROCKY+MTN+HOUSE+AUT (AES: 3015523, POR: 1994–2026):
+- DC broke the daily record (341.8 > 332)
+
+ESTHER+1 (AES: 301B460, POR: 1994–2026):
+- FWI broke the daily record (68.4 > 51.4)
+- ISI broke the daily record (40.7 > 27.9)
+
+WAINWRIGHT+CFB+AIRFIELD+21 (AES: 301S001, POR: 1995–2026):
+- FWI broke the daily record (33.8 > 32.9)
+
+LACOMBE+CDA+2 (AES: 3023722, POR: 1994–2026):
+- DC broke the daily record (429.7 > 418.5)
+
+THREE+HILLS (AES: 3026479, POR: 1994–2026):
+- DC broke the daily record (444.9 > 437.7)
+
+BOW+ISLAND (AES: 3030768, POR: 1994–2026):
+- ▲ FWI broke the monthly record (92.3 > 91.7)
+- FWI broke the daily record (92.3 > 89.4)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- FWI broke the daily record (49.4 > 39)
+- ISI broke the daily record (27.5 > 26.5)
+
+LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
+- ▲ FWI broke the monthly record (126 > 110.3)
+- FWI broke the daily record (126 > 83.6)
+- ISI broke the daily record (86.5 > 44.5)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- BUI broke the daily record (110.1 > 105.3)
+
+JASPER+WARDEN (AES: 3053536, POR: 1994–2026):
+- BUI broke the daily record (69.1 > 69)
+
+BROADVIEW (AES: 4010879, POR: 1967–2026):
+- FFMC broke the daily record (93.9 > 93.6)
+
+INDIAN+HEAD+CDA (AES: 4013480, POR: 1970–2026):
+- FFMC broke the daily record (95.4 > 93.9)
+
+WATROUS+EAST (AES: 4018642, POR: 1994–2026):
+- FFMC broke the daily record (95.2 > 94.7)
+- FWI broke the daily record (66.7 > 39.8)
+- ISI broke the daily record (47.8 > 26)
+
+WYNYARD+AUT (AES: 40190LN, POR: 1994–2026):
+- FFMC broke the daily record (94.6 > 93.1)
+- FWI broke the daily record (39.9 > 37.8)
+- ISI broke the daily record (27.7 > 21.2)
+
+WEYBURN (AES: 401HP5R, POR: 1994–2026):
+- FFMC broke the daily record (95.1 > 93.9)
+
+ASSINIBOIA+AIRPORT (AES: 4020286, POR: 1994–2026):
+- FFMC broke the daily record (94.7 > 94.3)
+
+ELBOW+CS (AES: 4022359, POR: 1994–2026):
+- FFMC broke the daily record (95.2 > 94.5)
+- FWI broke the daily record (92 > 32.4)
+- ISI broke the daily record (69.6 > 24.9)
+
+LUCKY+LAKE (AES: 4024714, POR: 1994–2026):
+- FFMC broke the daily record (95.3 > 94.3)
+- FWI broke the daily record (96.3 > 56.8)
+- ISI broke the daily record (64.4 > 29.1)
+
+MAPLE+CREEK (AES: 4024919, POR: 1994–2026):
+- ▲ FWI broke the monthly record (130.6 > 110.7)
+- FFMC broke the daily record (94.9 > 94.5)
+- FWI broke the daily record (130.6 > 79.1)
+- ISI broke the daily record (102.9 > 52)
+
+SWIFT+CURRENT+CDA (AES: 4028060, POR: 1970–2026):
+- ▲ FWI broke the monthly record (118.6 > 110)
+- ▲ ISI broke the monthly record (106.7 > 100.5)
+- FFMC broke the daily record (94.2 > 93.6)
+- FWI broke the daily record (118.6 > 74.7)
+- ISI broke the daily record (106.7 > 50.3)
+
+LEADER+AIRPORT (AES: 402DAF0, POR: 1994–2026):
+- ISI broke the daily record (56 > 37.7)
+
+VAL+MARIE+SOUTHEAST (AES: 4038412, POR: 1994–2026):
+- FWI broke the daily record (116.9 > 78.4)
+- ISI broke the daily record (99.9 > 53.3)
+
+ROSETOWN+EAST (AES: 4046884, POR: 1994–2026):
+- FFMC broke the daily record (95.1 > 94.1)
+- FWI broke the daily record (90.2 > 46.7)
+- ISI broke the daily record (62.3 > 23.8)
+
+MELFORT (AES: 4055079, POR: 1994–2026):
+- FFMC broke the daily record (94.6 > 93.3)
+- ISI tied the daily record (30.4)
+
+OUTLOOK+PFRA (AES: 4055736, POR: 1970–2026):
+- FFMC broke the daily record (95.4 > 93.8)
+- FWI broke the daily record (93.7 > 38.9)
+- ISI broke the daily record (70.9 > 27)
+
+PRINCE+ALBERT+A (AES: 4056240, POR: 1953–2026):
+- FFMC tied the daily record (94.9)
+
+SPIRITWOOD+WEST (AES: 4067723, POR: 1994–2026):
+- FFMC broke the daily record (94.6 > 93.9)
+- ISI broke the daily record (44 > 43.7)
+
+ROBLIN (AES: 5012469, POR: 1996–2026):
+- FFMC broke the daily record (93.9 > 93)
+
+SHOAL+LAKE+CS (AES: 5012654, POR: 1994–2026):
+- DC broke the daily record (389.4 > 377)
+
+MELITA (AES: 501A7AR, POR: 1994–2026):
+- FFMC broke the daily record (94.6 > 94.3)
+
