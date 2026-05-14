@@ -1,0 +1,22 @@
+BALLENAS+ISLAND (AES: 1020590, POR: 1994–2026):
+- FWI broke the daily record (5.2 > 3.1)
+- ISI broke the daily record (7.1 > 3.7)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (421.8 > 399.6)
+- DC broke the daily record (421.8 > 387.7)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- FWI broke the daily record (17.1 > 16.1)
+
+CYPRESS+HILLS+PARK (AES: 4031999, POR: 1994–2026):
+- DC broke the daily record (148.9 > 15)
+- DMC broke the daily record (7.8 > 5.5)
+- FFMC broke the daily record (82.2 > 49.3)
+
+ROCKGLEN+AUT (AES: 4036844, POR: 1971–2026):
+- DC broke the daily record (368.8 > 309.7)
+
+VAL+MARIE+SOUTHEAST (AES: 4038412, POR: 1994–2026):
+- DC broke the daily record (565.6 > 520.5)
+

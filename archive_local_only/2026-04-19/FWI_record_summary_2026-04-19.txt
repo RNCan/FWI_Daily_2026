@@ -1,0 +1,22 @@
+ESQUIMALT+HARBOUR (AES: 1012710, POR: 1994–2026):
+- FFMC broke the daily record (85.7 > 84.6)
+- FWI broke the daily record (9.3 > 5.1)
+- ISI broke the daily record (7.9 > 3.3)
+
+VICTORIA+GONZALES+CS (AES: 1018611, POR: 1994–2026):
+- ISI broke the daily record (7.5 > 6.3)
+
+HERBERT+ISLAND+AUT (AES: 1063461, POR: 1994–2026):
+- FFMC broke the daily record (82.8 > 80.9)
+
+POINT+ATKINSON (AES: 1106200, POR: 1996–2026):
+- DC broke the daily record (41.7 > 41.6)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (455 > 399.6)
+- DC broke the daily record (455 > 381.7)
+- FWI broke the daily record (25.8 > 25.3)
+
+LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
+- ISI broke the daily record (16.8 > 15.9)
+
