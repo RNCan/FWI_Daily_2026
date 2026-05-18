@@ -17,30 +17,178 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 #topbar {
+
   background: #222;
   color: white;
-  padding: 12px;
+
+  padding: 10px 14px;
+
   display: flex;
   align-items: center;
+
   gap: 15px;
+
+  height: 58px;
+
+  box-sizing: border-box;
 }
 
 #title {
-  font-size: 20px;
+
+  font-size: 22px;
   font-weight: bold;
 }
 
-#dateSelect {
-  padding: 6px 10px;
-  font-size: 15px;
+#calendarButton {
+
+  background: #D7191C;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.15s;
+}
+
+#calendarButton:hover {
+
+  background: #9E0D13;
+}
+
+#calendarPanel {
+
+  display: none;
+
+  position: absolute;
+
+  top: 65px;
+  left: 15px;
+
+  z-index: 9999;
+
+  background: rgba(34,34,34,0.97);
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 0 18px rgba(0,0,0,0.45);
+
+  max-width: 92vw;
+
+  max-height: 80vh;
+
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#calendar {
+
+  display: flex;
+
+  gap: 12px;
+
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+}
+
+.month-block {
+
+  background: #2B2B2B;
+
+  padding: 6px;
+
+  border-radius: 8px;
+
+  flex-shrink: 0;
+}
+
+.month-title {
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  margin-bottom: 4px;
+
+  text-align: center;
+}
+
+.month-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 22px);
+
+  gap: 3px;
+}
+
+.calendar-day {
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 4px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  user-select: none;
+}
+
+.available {
+
+  background: #D7191C;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.12s;
+}
+
+.available:hover {
+
+  background: #9E0D13;
+
+  transform: scale(1.15);
+}
+
+.unavailable {
+
+  background: #555;
+
+  color: #888;
 }
 
 #mapFrame {
+
   width: 100%;
+
   height: calc(100vh - 58px);
+
   border: none;
 }
 
@@ -52,75 +200,69 @@ body {
 
 <div id="topbar">
 
-<div id="title">
-Canadian FWI Interactive Archive
+  <div id="title">
+    Canadian FWI Interactive Archive
+  </div>
+
+  <button id="calendarButton">
+    Select date
+  </button>
+
 </div>
 
-<select id="dateSelect">
-<option value="archives/2026-05-15/FWI_record_map_20260515.html">2026-05-15</option>
-<option value="archives/2026-05-14/FWI_record_map_20260514.html">2026-05-14</option>
-<option value="archives/2026-05-13/FWI_record_map_20260513.html">2026-05-13</option>
-<option value="archives/2026-05-12/FWI_record_map_20260512.html">2026-05-12</option>
-<option value="archives/2026-05-11/FWI_record_map_20260511.html">2026-05-11</option>
-<option value="archives/2026-05-10/FWI_record_map_20260510.html">2026-05-10</option>
-<option value="archives/2026-05-09/FWI_record_map_20260509.html">2026-05-09</option>
-<option value="archives/2026-05-08/FWI_record_map_20260508.html">2026-05-08</option>
-<option value="archives/2026-05-07/FWI_record_map_20260507.html">2026-05-07</option>
-<option value="archives/2026-05-06/FWI_record_map_20260506.html">2026-05-06</option>
-<option value="archives/2026-05-05/FWI_record_map_20260505.html">2026-05-05</option>
-<option value="archives/2026-05-04/FWI_record_map_20260504.html">2026-05-04</option>
-<option value="archives/2026-05-03/FWI_record_map_20260503.html">2026-05-03</option>
-<option value="archives/2026-05-02/FWI_record_map_20260502.html">2026-05-02</option>
-<option value="archives/2026-05-01/FWI_record_map_20260501.html">2026-05-01</option>
-<option value="archives/2026-04-30/FWI_record_map_20260430.html">2026-04-30</option>
-<option value="archives/2026-04-29/FWI_record_map_20260429.html">2026-04-29</option>
-<option value="archives/2026-04-28/FWI_record_map_20260428.html">2026-04-28</option>
-<option value="archives/2026-04-27/FWI_record_map_20260427.html">2026-04-27</option>
-<option value="archives/2026-04-26/FWI_record_map_20260426.html">2026-04-26</option>
-<option value="archives/2026-04-25/FWI_record_map_20260425.html">2026-04-25</option>
-<option value="archives/2026-04-24/FWI_record_map_20260424.html">2026-04-24</option>
-<option value="archives/2026-04-23/FWI_record_map_20260423.html">2026-04-23</option>
-<option value="archives/2026-04-22/FWI_record_map_20260422.html">2026-04-22</option>
-<option value="archives/2026-04-21/FWI_record_map_20260421.html">2026-04-21</option>
-<option value="archives/2026-04-20/FWI_record_map_20260420.html">2026-04-20</option>
-<option value="archives/2026-04-19/FWI_record_map_20260419.html">2026-04-19</option>
-<option value="archives/2026-04-18/FWI_record_map_20260418.html">2026-04-18</option>
-<option value="archives/2026-04-17/FWI_record_map_20260417.html">2026-04-17</option>
-<option value="archives/2026-04-16/FWI_record_map_20260416.html">2026-04-16</option>
-<option value="archives/2026-04-15/FWI_record_map_20260415.html">2026-04-15</option>
-<option value="archives/2026-04-14/FWI_record_map_20260414.html">2026-04-14</option>
-<option value="archives/2026-04-13/FWI_record_map_20260413.html">2026-04-13</option>
-<option value="archives/2026-04-12/FWI_record_map_20260412.html">2026-04-12</option>
-<option value="archives/2026-04-11/FWI_record_map_20260411.html">2026-04-11</option>
-<option value="archives/2026-04-10/FWI_record_map_20260410.html">2026-04-10</option>
-<option value="archives/2026-04-09/FWI_record_map_20260409.html">2026-04-09</option>
-<option value="archives/2026-04-08/FWI_record_map_20260408.html">2026-04-08</option>
-<option value="archives/2026-04-07/FWI_record_map_20260407.html">2026-04-07</option>
-<option value="archives/2026-04-06/FWI_record_map_20260406.html">2026-04-06</option>
-<option value="archives/2026-04-05/FWI_record_map_20260405.html">2026-04-05</option>
-<option value="archives/2026-04-04/FWI_record_map_20260404.html">2026-04-04</option>
-<option value="archives/2026-04-03/FWI_record_map_20260403.html">2026-04-03</option>
-<option value="archives/2026-04-02/FWI_record_map_20260402.html">2026-04-02</option>
-<option value="archives/2026-04-01/FWI_record_map_20260401.html">2026-04-01</option>
-</select>
+<div id="calendarPanel">
+
+  <div id="calendar"><div class='month-block'><div class='month-title'>April 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-04-01/FWI_record_map_20260401.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-02/FWI_record_map_20260402.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-03/FWI_record_map_20260403.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-04/FWI_record_map_20260404.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-05/FWI_record_map_20260405.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-06/FWI_record_map_20260406.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-07/FWI_record_map_20260407.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-08/FWI_record_map_20260408.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-09/FWI_record_map_20260409.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-10/FWI_record_map_20260410.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-11/FWI_record_map_20260411.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-12/FWI_record_map_20260412.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-13/FWI_record_map_20260413.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-14/FWI_record_map_20260414.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-15/FWI_record_map_20260415.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-16/FWI_record_map_20260416.html')">16</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-17/FWI_record_map_20260417.html')">17</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-18/FWI_record_map_20260418.html')">18</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-19/FWI_record_map_20260419.html')">19</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-20/FWI_record_map_20260420.html')">20</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-21/FWI_record_map_20260421.html')">21</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-22/FWI_record_map_20260422.html')">22</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-23/FWI_record_map_20260423.html')">23</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-24/FWI_record_map_20260424.html')">24</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-25/FWI_record_map_20260425.html')">25</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-26/FWI_record_map_20260426.html')">26</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-27/FWI_record_map_20260427.html')">27</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-28/FWI_record_map_20260428.html')">28</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-29/FWI_record_map_20260429.html')">29</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-30/FWI_record_map_20260430.html')">30</div></div></div><div class='month-block'><div class='month-title'>May 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-05-01/FWI_record_map_20260501.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-02/FWI_record_map_20260502.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-03/FWI_record_map_20260503.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-04/FWI_record_map_20260504.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-05/FWI_record_map_20260505.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-06/FWI_record_map_20260506.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-07/FWI_record_map_20260507.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-08/FWI_record_map_20260508.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-09/FWI_record_map_20260509.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-10/FWI_record_map_20260510.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-11/FWI_record_map_20260511.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-12/FWI_record_map_20260512.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-13/FWI_record_map_20260513.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-14/FWI_record_map_20260514.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-15/FWI_record_map_20260515.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-16/FWI_record_map_20260516.html')">16</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-17/FWI_record_map_20260517.html')">17</div><div class='calendar-day unavailable' >18</div><div class='calendar-day unavailable' >19</div><div class='calendar-day unavailable' >20</div><div class='calendar-day unavailable' >21</div><div class='calendar-day unavailable' >22</div><div class='calendar-day unavailable' >23</div><div class='calendar-day unavailable' >24</div><div class='calendar-day unavailable' >25</div><div class='calendar-day unavailable' >26</div><div class='calendar-day unavailable' >27</div><div class='calendar-day unavailable' >28</div><div class='calendar-day unavailable' >29</div><div class='calendar-day unavailable' >30</div><div class='calendar-day unavailable' >31</div></div></div></div>
 
 </div>
 
 <iframe
   id="mapFrame"
-  src="archives/2026-05-15/FWI_record_map_20260515.html">
+  src="archives/2026-04-01/FWI_record_map_20260401.html">
 </iframe>
 
 <script>
 
+function loadMap(path) {
+
+  document
+    .getElementById("mapFrame")
+    .src = path;
+
+  document
+    .getElementById("calendarPanel")
+    .style.display = "none";
+}
+
 document
-  .getElementById("dateSelect")
-  .addEventListener("change", function() {
+  .getElementById("calendarButton")
+  .addEventListener("click", function() {
 
-    document
-      .getElementById("mapFrame")
-      .src = this.value;
+    const panel = document.getElementById("calendarPanel");
 
+    if(panel.style.display === "block") {
+
+      panel.style.display = "none";
+
+    } else {
+
+      panel.style.display = "block";
+    }
+});
+
+document.addEventListener("click", function(event) {
+
+  const panel = document.getElementById("calendarPanel");
+
+  const button = document.getElementById("calendarButton");
+
+  if(
+    !panel.contains(event.target) &&
+    !button.contains(event.target)
+  ) {
+
+    panel.style.display = "none";
+  }
 });
 
 </script>
