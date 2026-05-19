@@ -3719,6 +3719,73 @@ MELITA (AES: 501A7AR, POR: 1994–2026):
 
 
 ==================================================
+FWI_record_summary_20260519.txt
+==================================================
+
+BALLENAS+ISLAND (AES: 1020590, POR: 1994–2026):
+- BUI broke the daily record (42.1 > 38)
+- DMC broke the daily record (29.7 > 26.1)
+
+ENTRANCE+ISLAND (AES: 1022689, POR: 1994–2026):
+- BUI broke the daily record (49.1 > 38.8)
+
+PORT+ALBERNI+AUT (AES: 1036B06, POR: 1994–2026):
+- BUI broke the daily record (49.5 > 49.1)
+
+WILLIAMS+LAKE+A (AES: 1098940, POR: 1961–2026):
+- ▲ BUI broke the monthly record (117.8 > 81.8)
+- ▲ DC broke the monthly record (380.6 > 323.9)
+- ▲ DMC broke the monthly record (96 > 81.9)
+- BUI broke the daily record (117.8 > 71.6)
+- DC broke the daily record (380.6 > 269.6)
+- DMC broke the daily record (96 > 68.6)
+
+VANCOUVER+HARBOUR+CS (AES: 1108446, POR: 1978–2026):
+- BUI broke the daily record (42.7 > 42.4)
+- DC broke the daily record (170.8 > 151.2)
+
+LACOMBE+CDA+2 (AES: 3023722, POR: 1994–2026):
+- BUI broke the daily record (96.6 > 90)
+- DC broke the daily record (458.3 > 455.4)
+
+THREE+HILLS (AES: 3026479, POR: 1994–2026):
+- BUI broke the daily record (103 > 95.6)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- DC broke the daily record (463.6 > 450.6)
+
+LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
+- ▲ DMC broke the monthly record (96.5 > 88.9)
+- BUI broke the daily record (135 > 125.1)
+- DMC broke the daily record (96.5 > 79.4)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- BUI broke the daily record (90.5 > 82.2)
+
+CROWSNEST (AES: 3051R4R, POR: 1994–2026):
+- DMC broke the daily record (44.7 > 34.2)
+
+BURLINGTON+PIERS+AUT (AES: 6151061, POR: 1994–2026):
+- ISI broke the daily record (5.4 > 4.8)
+
+TROIS-RIVIERES (AES: 7018562, POR: 1994–2026):
+- ISI broke the daily record (9 > 6.7)
+
+CHEVERY (AES: 7041382, POR: 1994–2026):
+- DMC broke the daily record (9.4 > 8.9)
+- FFMC broke the daily record (84.7 > 84.2)
+- FWI broke the daily record (3.9 > 2.3)
+- ISI broke the daily record (3.6 > 2.7)
+
+ARGENTIA+AUT (AES: 8400104, POR: 1987–2026):
+- FFMC broke the daily record (73.9 > 42.6)
+- FWI broke the daily record (0.4 > 0.1)
+- ISI broke the daily record (1.3 > 0.4)
+
+
+
+
+==================================================
 FWI_record_summary_20260518.txt
 ==================================================
 
