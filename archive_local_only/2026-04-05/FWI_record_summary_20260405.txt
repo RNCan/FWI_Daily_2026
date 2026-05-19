@@ -1,0 +1,23 @@
+VICTORIA+GONZALES+CS (AES: 1018611, POR: 1994–2026):
+- FFMC broke the daily record (85.6 > 84.3)
+- ISI broke the daily record (5.4 > 4.9)
+
+AGASSIZ+CS (AES: 1100119, POR: 1994–2026):
+- ISI broke the daily record (3.1 > 3)
+
+SUMMERLAND+CS (AES: 112G8L1, POR: 1994–2026):
+- DMC broke the daily record (33.3 > 32.9)
+
+SALMON+ARM+CS (AES: 116FRMN, POR: 1994–2026):
+- FFMC tied the daily record (86.8)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (422.8 > 399.6)
+- DC broke the daily record (422.8 > 366.9)
+
+ROCKGLEN+AUT (AES: 4036844, POR: 1971–2026):
+- DC broke the daily record (372.9 > 327.2)
+
+VAL+MARIE+SOUTHEAST (AES: 4038412, POR: 1994–2026):
+- DC broke the daily record (555.4 > 527.4)
+

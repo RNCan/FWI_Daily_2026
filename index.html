@@ -6,6 +6,9 @@
 
 <meta charset="utf-8">
 
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
 <title>Canadian FWI Interactive Archive</title>
 
 <link rel="icon"
@@ -15,19 +18,26 @@
 <style>
 
 body {
+
   margin: 0;
+
   font-family: Arial, sans-serif;
+
   overflow: hidden;
+
+  background: #111;
 }
 
 #topbar {
 
   background: #222;
+
   color: white;
 
   padding: 10px 14px;
 
   display: flex;
+
   align-items: center;
 
   gap: 15px;
@@ -35,12 +45,17 @@ body {
   height: 58px;
 
   box-sizing: border-box;
+
+  z-index: 9999;
 }
 
 #title {
 
   font-size: 22px;
+
   font-weight: bold;
+
+  white-space: nowrap;
 }
 
 #calendarButton {
@@ -190,6 +205,88 @@ body {
   height: calc(100vh - 58px);
 
   border: none;
+
+  background: white;
+}
+
+@media (max-width: 900px) {
+
+  #topbar {
+
+    flex-wrap: wrap;
+
+    height: auto;
+
+    padding: 10px;
+
+    gap: 10px;
+  }
+
+  #title {
+
+    font-size: 16px;
+
+    width: 100%;
+  }
+
+  #calendarButton {
+
+    font-size: 13px;
+
+    padding: 10px 14px;
+  }
+
+  #calendarPanel {
+
+    top: 95px;
+    left: 8px;
+    right: 8px;
+
+    max-width: unset;
+
+    width: auto;
+
+    max-height: 70vh;
+
+    padding: 10px;
+  }
+
+  #calendar {
+
+    gap: 8px;
+  }
+
+  .month-block {
+
+    padding: 5px;
+  }
+
+  .month-title {
+
+    font-size: 11px;
+  }
+
+  .month-grid {
+
+    grid-template-columns: repeat(7, 28px);
+
+    gap: 4px;
+  }
+
+  .calendar-day {
+
+    width: 28px;
+    height: 28px;
+
+    font-size: 11px;
+
+    border-radius: 6px;
+  }
+
+  #mapFrame {
+
+    height: calc(100vh - 90px);
+  }
 }
 
 </style>
@@ -236,7 +333,9 @@ function loadMap(path) {
 
 document
   .getElementById("calendarButton")
-  .addEventListener("click", function() {
+  .addEventListener("click", function(event) {
+
+    event.stopPropagation();
 
     const panel = document.getElementById("calendarPanel");
 

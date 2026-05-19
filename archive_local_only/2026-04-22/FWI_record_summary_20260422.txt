@@ -1,0 +1,66 @@
+ENTRANCE+ISLAND (AES: 1022689, POR: 1994–2026):
+- ISI broke the daily record (12.8 > 10.1)
+
+ESTEVAN+POINT+CS (AES: 1032731, POR: 1994–2026):
+- ISI broke the daily record (10.2 > 7.3)
+
+SOLANDER+ISLAND+AUT (AES: 1037553, POR: 1994–2026):
+- FFMC broke the daily record (78.8 > 78.2)
+- FWI broke the daily record (12.2 > 4)
+- ISI broke the daily record (20 > 6.4)
+
+HERBERT+ISLAND+AUT (AES: 1063461, POR: 1994–2026):
+- FFMC broke the daily record (81 > 80.8)
+- FWI broke the daily record (9.7 > 6.7)
+- ISI broke the daily record (11.8 > 5.4)
+
+BURNS+LAKE+DECKER+LAKE (AES: 1091174, POR: 1991–2026):
+- ISI broke the daily record (9.4 > 7.9)
+
+POINT+ATKINSON (AES: 1106200, POR: 1996–2026):
+- DC broke the daily record (51.2 > 51)
+
+SUMMERLAND+CS (AES: 112G8L1, POR: 1994–2026):
+- ▲ FFMC broke the monthly record (93.7 > 93.2)
+- BUI broke the daily record (69.2 > 68.8)
+- FFMC broke the daily record (93.7 > 92.3)
+- FWI broke the daily record (42.3 > 36.6)
+- ISI broke the daily record (20.5 > 17.2)
+
+SALMON+ARM+CS (AES: 116FRMN, POR: 1994–2026):
+- FFMC broke the daily record (92.2 > 91.2)
+- FWI broke the daily record (21.5 > 18.7)
+- ISI broke the daily record (11.8 > 8.3)
+
+DRUMHELLER+EAST (AES: 30221LG, POR: 1994–2026):
+- ISI broke the daily record (25 > 23.9)
+
+THREE+HILLS (AES: 3026479, POR: 1994–2026):
+- DC broke the daily record (357.1 > 357)
+
+BROOKS (AES: 3030QLP, POR: 1989–2026):
+- ISI broke the daily record (36.6 > 35)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (468.1 > 399.6)
+- DC broke the daily record (468.1 > 373.8)
+- FWI broke the daily record (39.6 > 24.1)
+- ISI broke the daily record (23.4 > 15.1)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- BUI broke the daily record (66 > 41.4)
+- DMC broke the daily record (40 > 25.3)
+- FFMC broke the daily record (91.4 > 91)
+- FWI broke the daily record (68.7 > 30.4)
+- ISI broke the daily record (46.4 > 21.6)
+
+ONEFOUR+CDA (AES: 3044923, POR: 1994–2026):
+- FFMC broke the daily record (92.7 > 91.6)
+
+WEYBURN (AES: 401HP5R, POR: 1994–2026):
+- ISI broke the daily record (56.2 > 28.8)
+
+POINT+PETRE+AUT (AES: 6156559, POR: 1993–2026):
+- FWI broke the daily record (0.4 > 0.2)
+- ISI broke the daily record (1.3 > 0.8)
+

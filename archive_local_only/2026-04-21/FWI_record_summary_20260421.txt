@@ -1,0 +1,40 @@
+ESQUIMALT+HARBOUR (AES: 1012710, POR: 1994–2026):
+- ISI broke the daily record (5.6 > 5.4)
+
+SHERINGHAM+POINT (AES: 1017254, POR: 1994–2026):
+- FFMC broke the daily record (84.7 > 82.7)
+
+HOWE+SOUND+-+PAM+ROCKS (AES: 10459NN, POR: 1994–2026):
+- ISI broke the daily record (5.5 > 5.1)
+
+POINT+ATKINSON (AES: 1106200, POR: 1996–2026):
+- DC broke the daily record (48.2 > 48)
+
+THREE+HILLS (AES: 3026479, POR: 1994–2026):
+- DC broke the daily record (354 > 320.3)
+
+BOW+ISLAND (AES: 3030768, POR: 1994–2026):
+- FFMC broke the daily record (93.7 > 92.1)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (464.7 > 399.6)
+- DC broke the daily record (464.7 > 371.8)
+- FFMC broke the daily record (94.2 > 93.7)
+
+LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
+- FFMC broke the daily record (94.5 > 92.2)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- BUI broke the daily record (62.7 > 46.6)
+- DMC broke the daily record (37.7 > 32.3)
+- FFMC broke the daily record (94.5 > 91.3)
+
+WATERTON+PARK+GATE (AES: 3056214, POR: 1994–2026):
+- FFMC tied the daily record (93.8)
+
+VAL+MARIE+SOUTHEAST (AES: 4038412, POR: 1994–2026):
+- FFMC broke the daily record (93.5 > 92.5)
+
+MELITA (AES: 501A7AR, POR: 1994–2026):
+- ISI broke the daily record (23.2 > 19.3)
+

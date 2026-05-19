@@ -1,0 +1,26 @@
+ESQUIMALT+HARBOUR (AES: 1012710, POR: 1994–2026):
+- BUI broke the daily record (17.3 > 14.2)
+- DMC broke the daily record (14.7 > 12.2)
+
+SHERINGHAM+POINT (AES: 1017254, POR: 1994–2026):
+- BUI broke the daily record (10.6 > 10.4)
+- DC broke the daily record (37.4 > 36.4)
+
+PORT+ALBERNI+AUT (AES: 1036B06, POR: 1994–2026):
+- DC broke the daily record (40.1 > 30.2)
+
+BURNS+LAKE+DECKER+LAKE (AES: 1091174, POR: 1991–2026):
+- FFMC broke the daily record (88.3 > 87.6)
+- FWI broke the daily record (7.7 > 6.6)
+- ISI broke the daily record (6.6 > 5.9)
+
+POINT+ATKINSON (AES: 1106200, POR: 1996–2026):
+- DC broke the daily record (26.1 > 22.5)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- ▲ DC broke the monthly record (440.7 > 399.6)
+- DC broke the daily record (440.7 > 384.1)
+
+LUCKY+LAKE (AES: 4024714, POR: 1994–2026):
+- BUI broke the daily record (30.4 > 30.1)
+
