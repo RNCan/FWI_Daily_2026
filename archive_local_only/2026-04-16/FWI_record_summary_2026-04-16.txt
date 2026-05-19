@@ -1,7 +1,0 @@
-POINT+ATKINSON (AES: 1106200, POR: 1996–2026):
-- DC broke the daily record (33.2 > 31.4)
-
-CARDSTON (AES: 3031322, POR: 1994–2026):
-- ▲ DC broke the monthly record (446.6 > 399.6)
-- DC broke the daily record (446.6 > 374.7)
-
