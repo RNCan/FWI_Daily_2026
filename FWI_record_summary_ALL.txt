@@ -3749,10 +3749,11 @@ LACOMBE+CDA+2 (AES: 3023722, POR: 1994–2026):
 - DC broke the daily record (458.3 > 455.4)
 
 THREE+HILLS (AES: 3026479, POR: 1994–2026):
-- BUI broke the daily record (103 > 95.6)
+- BUI broke the daily record (100.2 > 95.6)
 
 CARDSTON (AES: 3031322, POR: 1994–2026):
-- DC broke the daily record (463.6 > 450.6)
+- BUI broke the daily record (66.1 > 64.8)
+- DC broke the daily record (466.8 > 450.6)
 
 LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
 - ▲ DMC broke the monthly record (96.5 > 88.9)
