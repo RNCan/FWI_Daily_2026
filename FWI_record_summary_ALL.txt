@@ -3719,6 +3719,123 @@ MELITA (AES: 501A7AR, POR: 1994–2026):
 
 
 ==================================================
+FWI_record_summary_20260523.txt
+==================================================
+
+BALLENAS+ISLAND (AES: 1020590, POR: 1994–2026):
+- BUI broke the daily record (48.8 > 45.1)
+- DMC broke the daily record (35 > 31.6)
+- FFMC broke the daily record (85.3 > 85)
+
+ENTRANCE+ISLAND (AES: 1022689, POR: 1994–2026):
+- ▲ BUI broke the monthly record (55.1 > 53.4)
+- BUI broke the daily record (55.1 > 43.9)
+- DMC broke the daily record (40 > 35.6)
+
+SISTERS+ISLAND (AES: 1027403, POR: 1994–2026):
+- BUI broke the daily record (52 > 46.8)
+- DMC broke the daily record (39.1 > 34.6)
+- FFMC broke the daily record (85.7 > 85.5)
+
+ESTEVAN+POINT+CS (AES: 1032731, POR: 1994–2026):
+- FFMC broke the daily record (87.2 > 84.1)
+
+PORT+ALBERNI+AUT (AES: 1036B06, POR: 1994–2026):
+- BUI broke the daily record (61.3 > 58.8)
+
+SOLANDER+ISLAND+AUT (AES: 1037553, POR: 1994–2026):
+- FFMC broke the daily record (83.2 > 79.2)
+
+HOWE+SOUND+-+PAM+ROCKS (AES: 10459NN, POR: 1994–2026):
+- DC broke the daily record (182.5 > 181)
+
+WILLIAMS+LAKE+A (AES: 1098940, POR: 1961–2026):
+- ▲ BUI broke the monthly record (127 > 81.8)
+- ▲ DC broke the monthly record (401.1 > 323.9)
+- ▲ DMC broke the monthly record (105.1 > 81.9)
+- BUI broke the daily record (127 > 74.3)
+- DC broke the daily record (401.1 > 280)
+- DMC broke the daily record (105.1 > 74.3)
+
+VANCOUVER+HARBOUR+CS (AES: 1108446, POR: 1978–2026):
+- DC broke the daily record (193.5 > 173.7)
+
+OSOYOOS+CS (AES: 1125852, POR: 1994–2026):
+- FWI broke the daily record (40.2 > 30.7)
+- ISI broke the daily record (13.6 > 10.6)
+
+SUMMERLAND+CS (AES: 112G8L1, POR: 1994–2026):
+- DC broke the daily record (453 > 443.2)
+
+ROCKY+MTN+HOUSE+AUT (AES: 3015523, POR: 1994–2026):
+- DC broke the daily record (352 > 332.7)
+
+LACOMBE+CDA+2 (AES: 3023722, POR: 1994–2026):
+- DC broke the daily record (461.7 > 453.7)
+
+RED+DEER+A (AES: 3025480, POR: 1953–2026):
+- DC broke the daily record (593.1 > 547.7)
+
+THREE+HILLS (AES: 3026479, POR: 1994–2026):
+- BUI broke the daily record (109.3 > 86)
+- DMC broke the daily record (75.5 > 59.1)
+
+CARDSTON (AES: 3031322, POR: 1994–2026):
+- DC broke the daily record (486.6 > 469.6)
+
+CLARESHOLM (AES: 3031640, POR: 1994–2026):
+- ▲ BUI broke the monthly record (108.4 > 107.7)
+- BUI broke the daily record (108.4 > 75)
+- DC broke the daily record (492 > 436.7)
+- DMC broke the daily record (74.8 > 54.7)
+
+LETHBRIDGE+CDA (AES: 3033890, POR: 1994–2026):
+- ▲ BUI broke the monthly record (146.5 > 135.2)
+- ▲ DMC broke the monthly record (106.9 > 88.9)
+- BUI broke the daily record (146.5 > 89)
+- DMC broke the daily record (106.9 > 88.9)
+
+MILK+RIVER (AES: 3044533, POR: 1994–2026):
+- DC broke the daily record (563.5 > 467.4)
+
+CROWSNEST (AES: 3051R4R, POR: 1994–2026):
+- DMC broke the daily record (44.3 > 39.5)
+
+JASPER+WARDEN (AES: 3053536, POR: 1994–2026):
+- BUI broke the daily record (71.7 > 70.7)
+
+URANIUM+CITY+AUT (AES: 406QLD0, POR: 1994–2026):
+- ISI broke the daily record (9.5 > 8.7)
+
+SAULT+STE+MARIE+A (AES: 6057592, POR: 1962–2026):
+- ISI broke the daily record (12.5 > 12.4)
+
+TROIS-RIVIERES (AES: 7018562, POR: 1994–2026):
+- FFMC broke the daily record (91.6 > 88.6)
+
+CHEVERY (AES: 7041382, POR: 1994–2026):
+- BUI broke the daily record (10.4 > 7.9)
+- DC broke the daily record (32.2 > 30.4)
+- DMC broke the daily record (8.7 > 6.2)
+
+CAP-MADELEINE (AES: 7051163, POR: 1994–2026):
+- FFMC broke the daily record (84.7 > 73.7)
+- FWI broke the daily record (5.8 > 3.7)
+
+WESTERN+HEAD (AES: 8206240, POR: 1990–2026):
+- FFMC broke the daily record (92.1 > 77.6)
+- FWI broke the daily record (15.2 > 4.1)
+- ISI broke the daily record (10.4 > 2.2)
+
+ARGENTIA+AUT (AES: 8400104, POR: 1987–2026):
+- BUI broke the daily record (7.3 > 6.5)
+- DMC broke the daily record (4.7 > 4.3)
+- FFMC broke the daily record (82.7 > 73.2)
+
+
+
+
+==================================================
 FWI_record_summary_20260522.txt
 ==================================================
 
