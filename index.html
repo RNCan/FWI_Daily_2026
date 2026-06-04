@@ -625,23 +625,6 @@ aboutButton.addEventListener(
 
     calendarPanel.style.display = "none";
     monthlyPanel.style.display = "none";
-    indicesPanel.style.display = "none";
-
-    aboutPanel.style.display =
-      aboutPanel.style.display === "block"
-      ? "none"
-      : "block";
-  }
-);
-
-aboutButton.addEventListener(
-  "click",
-  function(event){
-
-    event.stopPropagation();
-
-    calendarPanel.style.display = "none";
-    monthlyPanel.style.display = "none";
 
     aboutPanel.style.display =
       aboutPanel.style.display === "block"
