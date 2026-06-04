@@ -273,6 +273,45 @@ body{
   background:white;
 }
 
+#indicesPanel{
+
+  display:none;
+
+  position:absolute;
+
+  top:65px;
+  right:15px;
+
+  z-index:9999;
+
+  background:rgba(34,34,34,0.97);
+
+  color:white;
+
+  padding:18px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px rgba(0,0,0,0.45);
+
+  width:550px;
+
+  max-width:90vw;
+
+  max-height:80vh;
+
+  overflow-y:auto;
+
+  line-height:1.6;
+}
+
+#indicesPanel h3,
+#indicesPanel p,
+#indicesPanel li{
+  color:white;
+}
+
+
 @media (max-width:900px){
 
   #topbar{
@@ -298,6 +337,17 @@ body{
     width:auto;
 
     max-height:70vh;
+  }
+
+  #indicesPanel{
+    display:none;
+  }
+
+  #indicesPanel,
+  #indicesPanel p,
+  #indicesPanel li,
+  #indicesPanel h3 {
+    color: white;
   }
 
   #aboutPanel{
@@ -337,6 +387,10 @@ body{
 <button id="monthlyButton">
   Monthly summary maps
 </button>
+
+  <button id="indicesButton"> 
+    What are the FWI Indices ?
+  </button>
 
   <button id="aboutButton">
     About
@@ -417,6 +471,43 @@ yan.boulanger@nrcan.gc.ca
 </p>
 </div>
 
+<div id="indicesPanel" class="popup-panel">
+
+<h3>Canadian Fire Weather Index System</h3>
+
+<p>
+The Canadian Forest Fire Weather Index (FWI) System is used across Canada
+to estimate fire danger from weather observations.
+</p>
+
+<ul>
+
+<li><b>FFMC</b> (Fine Fuel Moisture Code)<br>
+Moisture content of surface litter and fine fuels. Higher values indicate easier ignition, notably for human-caused fires.</li>
+
+<li><b>DMC</b> (Duff Moisture Code)<br>
+Moisture content of shallow organic layers. Higher values indicate drier fuels and greater fuel consumption. Good indicator for lightning-caused fires</li>
+
+<li><b>DC</b> (Drought Code)<br>
+Moisture content of deep organic layers. Represents long-term drought conditions.</li>
+
+<li><b>ISI</b> (Initial Spread Index)<br>
+Potential rate of fire spread based on wind and fine fuel moisture.</li>
+
+<li><b>BUI</b> (Build-Up Index)<br>
+Amount of fuel available for combustion.</li>
+
+<li><b>FWI</b> (Fire Weather Index)<br>
+Overall indicator of potential fire danger.</li>
+
+</ul>
+
+<p style="font-size:12px;color:white;">
+Higher values generally indicate more severe fire weather conditions.
+</p>
+
+</div>
+
 <iframe
   id="mapFrame"
   src="archives/2026-06-03/FWI_record_map_20260603.html">
@@ -461,6 +552,12 @@ monthlyButton.addEventListener(
   }
 );
 
+const indicesButton =
+  document.getElementById("indicesButton");
+
+const indicesPanel =
+  document.getElementById("indicesPanel");
+
 const aboutButton =
   document.getElementById("aboutButton");
 
@@ -478,6 +575,40 @@ calendarButton.addEventListener(
 
     calendarPanel.style.display =
       calendarPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+indicesButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    calendarPanel.style.display = "none";
+    monthlyPanel.style.display = "none";
+    aboutPanel.style.display = "none";
+
+    indicesPanel.style.display =
+      indicesPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+aboutButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    calendarPanel.style.display = "none";
+    monthlyPanel.style.display = "none";
+    indicesPanel.style.display = "none";
+
+    aboutPanel.style.display =
+      aboutPanel.style.display === "block"
       ? "none"
       : "block";
   }
@@ -502,6 +633,13 @@ aboutButton.addEventListener(
 document.addEventListener(
   "click",
   function(event){
+
+ if(
+   !indicesPanel.contains(event.target) &&
+   !indicesButton.contains(event.target)
+ ){
+   indicesPanel.style.display = "none";
+ }
 
  if(
   !calendarPanel.contains(event.target) &&
