@@ -3884,7 +3884,7 @@ LA+POCATIERE (AES: 7054096, POR: 1996–2026):
 MONT+JOLI+A (AES: 7055120, POR: 1953–2026):
 - FFMC broke the daily record (92.6 > 91.6)
 - FWI broke the daily record (32.9 > 22.9)
-- ISI broke the daily record (30.9 > 20.8)
+- ISI broke the daily record (30.8 > 20.8)
 
 JONQUIERE (AES: 7063370, POR: 1994–2026):
 - FFMC broke the daily record (94.3 > 91.5)
@@ -4131,7 +4131,7 @@ MANIWAKI+AIRPORT (AES: 7034482, POR: 1994–2026):
 - FFMC broke the daily record (94.4 > 93.5)
 
 BLANC+SABLON+A (AES: 7040813, POR: 1982–2026):
-- FWI broke the daily record (17.3 > 16.2)
+- FWI broke the daily record (19.1 > 16.2)
 
 CHEVERY (AES: 7041382, POR: 1994–2026):
 - BUI broke the daily record (25.7 > 7.9)
