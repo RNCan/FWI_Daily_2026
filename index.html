@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Canadian FWI Interactive Archive - Beta Version</title>
+
+<link rel="icon"
+      type="image/png"
+      href="assets/favicon_canada_fire.png">
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  overflow:hidden;
+  background:#111;
+}
+
+#topbar{
+  background:#222;
+  color:white;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  height:58px;
+  box-sizing:border-box;
+  z-index:9999;
+}
+
+#title{
+  font-size:22px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+#calendarButton,
+#aboutButton{
+
+  color:white;
+
+  border:none;
+
+  padding:8px 14px;
+
+  border-radius:8px;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.15s;
+}
+
+#monthlyButton{
+
+  background:#2C7FB8;
+
+  color:white;
+
+  border:none;
+
+  padding:8px 14px;
+
+  border-radius:8px;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+}
+
+#monthlyButton:hover{
+  background:#1D5F8C;
+}
+
+#calendarButton{
+  background:#D7191C;
+}
+
+#calendarButton:hover{
+  background:#9E0D13;
+}
+
+#aboutButton{
+  background:#444;
+}
+
+#aboutButton:hover{
+  background:#666;
+}
+
+#subtitle {
+
+  font-size: 11px;
+
+  font-style: italic;
+
+  color: #777777;
+
+}
+
+#calendarPanel{
+
+  display:none;
+
+  position:absolute;
+
+  top:65px;
+  left:15px;
+
+  z-index:9999;
+
+  background:rgba(34,34,34,0.97);
+
+  padding:15px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px rgba(0,0,0,0.45);
+
+  max-width:92vw;
+
+  max-height:80vh;
+
+  overflow-y:auto;
+  overflow-x:auto;
+}
+
+#aboutPanel{
+
+  display:none;
+
+  position:absolute;
+
+  top:65px;
+  right:15px;
+
+  z-index:9999;
+
+  background:rgba(34,34,34,0.97);
+
+  color:white;
+
+  padding:18px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px rgba(0,0,0,0.45);
+
+  width:500px;
+
+  max-width:90vw;
+
+  max-height:80vh;
+
+  overflow-y:auto;
+
+  line-height:1.6;
+}
+
+#aboutPanel a{
+  color:#7EC8FF;
+}
+
+#monthlyPanel{
+
+  display:none;
+
+  position:absolute;
+
+  top:65px;
+  left:15px;
+
+  z-index:9999;
+
+  background:rgba(34,34,34,0.97);
+
+  padding:15px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px rgba(0,0,0,0.45);
+
+  color:white;
+}
+
+.monthly-link{
+
+  background:#2C7FB8;
+
+  color:white;
+
+  padding:8px 12px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-weight:bold;
+}
+
+.monthly-link:hover{
+
+  background:#1D5F8C;
+}
+
+#calendar{
+
+  display:flex;
+
+  gap:12px;
+
+  align-items:flex-start;
+
+  flex-wrap:wrap;
+}
+
+#indicesButton{
+
+  color:black;
+
+  border:none;
+
+  padding:8px 14px;
+
+  border-radius:8px;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.15s;
+}
+
+#loading{
+
+  position:absolute;
+
+  top:58px;
+  left:0;
+  right:0;
+  bottom:0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-direction:column;
+
+  color:white;
+
+  background:#111;
+
+  font-size:22px;
+
+  font-weight:bold;
+
+  z-index:5000;
+}
+
+
+.month-block{
+  background:#2B2B2B;
+  padding:6px;
+  border-radius:8px;
+  flex-shrink:0;
+}
+
+.month-title{
+  color:white;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:4px;
+  text-align:center;
+}
+
+.month-grid{
+  display:grid;
+  grid-template-columns:repeat(7,22px);
+  gap:3px;
+}
+
+.calendar-day{
+  width:22px;
+  height:22px;
+  border-radius:4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  font-weight:bold;
+  user-select:none;
+}
+
+.available{
+  background:#D7191C;
+  color:white;
+  cursor:pointer;
+  transition:0.12s;
+}
+
+.available:hover{
+  background:#9E0D13;
+  transform:scale(1.15);
+}
+
+.unavailable{
+  background:#555;
+  color:#888;
+}
+
+#mapFrame{
+  width:100%;
+  height:calc(100vh - 58px);
+  border:none;
+  background:white;
+}
+
+#indicesPanel{
+
+  display:none;
+
+  position:absolute;
+
+  top:65px;
+  right:15px;
+
+  z-index:9999;
+
+  background:rgba(34,34,34,0.97);
+
+  color:white;
+
+  padding:18px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px rgba(0,0,0,0.45);
+
+  width:550px;
+
+  max-width:90vw;
+
+  max-height:80vh;
+
+  overflow-y:auto;
+
+  line-height:1.6;
+}
+
+#indicesPanel h3,
+#indicesPanel p,
+#indicesPanel li{
+  color:white;
+}
+
+
+@media (max-width:900px){
+
+  #topbar{
+    flex-wrap:wrap;
+    height:auto;
+    padding:10px;
+    gap:10px;
+  }
+
+  #title{
+    font-size:16px;
+    width:100%;
+  }
+
+  #calendarPanel{
+
+    top:95px;
+    left:8px;
+    right:8px;
+
+    max-width:unset;
+
+    width:auto;
+
+    max-height:70vh;
+  }
+
+  #indicesPanel{
+    display:none;
+  }
+
+  #indicesPanel,
+  #indicesPanel p,
+  #indicesPanel li,
+  #indicesPanel h3 {
+    color: white;
+  }
+
+  #aboutPanel{
+
+    top:95px;
+    left:8px;
+    right:8px;
+
+    width:auto;
+
+    max-width:unset;
+
+    max-height:70vh;
+  }
+
+  #mapFrame{
+    height:calc(100vh - 90px);
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="topbar">
+
+  <div id="title">
+    Canadian FWI Interactive Archive - Beta Version
+    <div id="subtitle">
+      Might be long to load. Be patient!
+    </div>
+  </div>
+
+  <button id="calendarButton">
+    Select date
+  </button>
+
+<button id="monthlyButton">
+  Monthly summary maps
+</button>
+
+  <button id="indicesButton"> 
+    What are the FWI Indices ?
+  </button>
+
+  <button id="aboutButton">
+    About
+  </button>
+
+</div>
+
+<div id="calendarPanel">
+
+  <div id="calendar"><div class='month-block'><div class='month-title'>April 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-04-01/FWI_record_map_20260401.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-02/FWI_record_map_20260402.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-03/FWI_record_map_20260403.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-04/FWI_record_map_20260404.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-05/FWI_record_map_20260405.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-06/FWI_record_map_20260406.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-07/FWI_record_map_20260407.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-08/FWI_record_map_20260408.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-09/FWI_record_map_20260409.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-10/FWI_record_map_20260410.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-11/FWI_record_map_20260411.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-12/FWI_record_map_20260412.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-13/FWI_record_map_20260413.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-14/FWI_record_map_20260414.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-15/FWI_record_map_20260415.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-16/FWI_record_map_20260416.html')">16</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-17/FWI_record_map_20260417.html')">17</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-18/FWI_record_map_20260418.html')">18</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-19/FWI_record_map_20260419.html')">19</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-20/FWI_record_map_20260420.html')">20</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-21/FWI_record_map_20260421.html')">21</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-22/FWI_record_map_20260422.html')">22</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-23/FWI_record_map_20260423.html')">23</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-24/FWI_record_map_20260424.html')">24</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-25/FWI_record_map_20260425.html')">25</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-26/FWI_record_map_20260426.html')">26</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-27/FWI_record_map_20260427.html')">27</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-28/FWI_record_map_20260428.html')">28</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-29/FWI_record_map_20260429.html')">29</div><div class='calendar-day available' onclick="loadMap('archives/2026-04-30/FWI_record_map_20260430.html')">30</div></div></div><div class='month-block'><div class='month-title'>May 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-05-01/FWI_record_map_20260501.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-02/FWI_record_map_20260502.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-03/FWI_record_map_20260503.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-04/FWI_record_map_20260504.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-05/FWI_record_map_20260505.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-06/FWI_record_map_20260506.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-07/FWI_record_map_20260507.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-08/FWI_record_map_20260508.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-09/FWI_record_map_20260509.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-10/FWI_record_map_20260510.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-11/FWI_record_map_20260511.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-12/FWI_record_map_20260512.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-13/FWI_record_map_20260513.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-14/FWI_record_map_20260514.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-15/FWI_record_map_20260515.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-16/FWI_record_map_20260516.html')">16</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-17/FWI_record_map_20260517.html')">17</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-18/FWI_record_map_20260518.html')">18</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-19/FWI_record_map_20260519.html')">19</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-20/FWI_record_map_20260520.html')">20</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-21/FWI_record_map_20260521.html')">21</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-22/FWI_record_map_20260522.html')">22</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-23/FWI_record_map_20260523.html')">23</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-24/FWI_record_map_20260524.html')">24</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-25/FWI_record_map_20260525.html')">25</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-26/FWI_record_map_20260526.html')">26</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-27/FWI_record_map_20260527.html')">27</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-28/FWI_record_map_20260528.html')">28</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-29/FWI_record_map_20260529.html')">29</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-30/FWI_record_map_20260530.html')">30</div><div class='calendar-day available' onclick="loadMap('archives/2026-05-31/FWI_record_map_20260531.html')">31</div></div></div><div class='month-block'><div class='month-title'>June 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-06-01/FWI_record_map_20260601.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-02/FWI_record_map_20260602.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-03/FWI_record_map_20260603.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-04/FWI_record_map_20260604.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-05/FWI_record_map_20260605.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-06/FWI_record_map_20260606.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-07/FWI_record_map_20260607.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-08/FWI_record_map_20260608.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-09/FWI_record_map_20260609.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-10/FWI_record_map_20260610.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-11/FWI_record_map_20260611.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-12/FWI_record_map_20260612.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-13/FWI_record_map_20260613.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-14/FWI_record_map_20260614.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-15/FWI_record_map_20260615.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-16/FWI_record_map_20260616.html')">16</div><div class='calendar-day unavailable' >17</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-18/FWI_record_map_20260618.html')">18</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-19/FWI_record_map_20260619.html')">19</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-20/FWI_record_map_20260620.html')">20</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-21/FWI_record_map_20260621.html')">21</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-22/FWI_record_map_20260622.html')">22</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-23/FWI_record_map_20260623.html')">23</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-24/FWI_record_map_20260624.html')">24</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-25/FWI_record_map_20260625.html')">25</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-26/FWI_record_map_20260626.html')">26</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-27/FWI_record_map_20260627.html')">27</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-28/FWI_record_map_20260628.html')">28</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-29/FWI_record_map_20260629.html')">29</div><div class='calendar-day available' onclick="loadMap('archives/2026-06-30/FWI_record_map_20260630.html')">30</div></div></div><div class='month-block'><div class='month-title'>July 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-07-01/FWI_record_map_20260701.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-02/FWI_record_map_20260702.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-03/FWI_record_map_20260703.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-04/FWI_record_map_20260704.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-05/FWI_record_map_20260705.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-06/FWI_record_map_20260706.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-07/FWI_record_map_20260707.html')">07</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-08/FWI_record_map_20260708.html')">08</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-09/FWI_record_map_20260709.html')">09</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-10/FWI_record_map_20260710.html')">10</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-11/FWI_record_map_20260711.html')">11</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-12/FWI_record_map_20260712.html')">12</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-13/FWI_record_map_20260713.html')">13</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-14/FWI_record_map_20260714.html')">14</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-15/FWI_record_map_20260715.html')">15</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-16/FWI_record_map_20260716.html')">16</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-17/FWI_record_map_20260717.html')">17</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-18/FWI_record_map_20260718.html')">18</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-19/FWI_record_map_20260719.html')">19</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-20/FWI_record_map_20260720.html')">20</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-21/FWI_record_map_20260721.html')">21</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-22/FWI_record_map_20260722.html')">22</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-23/FWI_record_map_20260723.html')">23</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-24/FWI_record_map_20260724.html')">24</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-25/FWI_record_map_20260725.html')">25</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-26/FWI_record_map_20260726.html')">26</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-27/FWI_record_map_20260727.html')">27</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-28/FWI_record_map_20260728.html')">28</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-29/FWI_record_map_20260729.html')">29</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-30/FWI_record_map_20260730.html')">30</div><div class='calendar-day available' onclick="loadMap('archives/2026-07-31/FWI_record_map_20260731.html')">31</div></div></div><div class='month-block'><div class='month-title'>August 2026</div><div class='month-grid'><div class='calendar-day available' onclick="loadMap('archives/2026-08-01/FWI_record_map_20260801.html')">01</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-02/FWI_record_map_20260802.html')">02</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-03/FWI_record_map_20260803.html')">03</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-04/FWI_record_map_20260804.html')">04</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-05/FWI_record_map_20260805.html')">05</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-06/FWI_record_map_20260806.html')">06</div><div class='calendar-day available' onclick="loadMap('archives/2026-08-07/FWI_record_map_20260807.html')">07</div><div class='calendar-day unavailable' >08</div><div class='calendar-day unavailable' >09</div><div class='calendar-day unavailable' >10</div><div class='calendar-day unavailable' >11</div><div class='calendar-day unavailable' >12</div><div class='calendar-day unavailable' >13</div><div class='calendar-day unavailable' >14</div><div class='calendar-day unavailable' >15</div><div class='calendar-day unavailable' >16</div><div class='calendar-day unavailable' >17</div><div class='calendar-day unavailable' >18</div><div class='calendar-day unavailable' >19</div><div class='calendar-day unavailable' >20</div><div class='calendar-day unavailable' >21</div><div class='calendar-day unavailable' >22</div><div class='calendar-day unavailable' >23</div><div class='calendar-day unavailable' >24</div><div class='calendar-day unavailable' >25</div><div class='calendar-day unavailable' >26</div><div class='calendar-day unavailable' >27</div><div class='calendar-day unavailable' >28</div><div class='calendar-day unavailable' >29</div><div class='calendar-day unavailable' >30</div><div class='calendar-day unavailable' >31</div></div></div></div>
+
+</div>
+
+<div id="monthlyPanel"><div style='display:flex;flex-direction:column;gap:8px;'><div class="monthly-link" onclick="loadMap('monthly_map/monthly_conditions_map_2026_04.html')">April 2026</div>
+<div class="monthly-link" onclick="loadMap('monthly_map/monthly_conditions_map_2026_05.html')">May 2026</div>
+<div class="monthly-link" onclick="loadMap('monthly_map/monthly_conditions_map_2026_06.html')">June 2026</div>
+<div class="monthly-link" onclick="loadMap('monthly_map/monthly_conditions_map_2026_07.html')">July 2026</div></div></div>
+
+<div id="aboutPanel">
+
+<h3 style="margin-top:0;">
+About this platform
+</h3>
+
+<p>
+This interactive platform displays daily Canadian Fire Weather Index (FWI)
+conditions and records for active weather stations across Canada as compiled by 
+the Canadian WildFire Information System.
+</p>
+
+<p>
+Colored markers identify stations currently experiencing daily,
+monthly or all-time FWI-related records. Only stations currently operating
+and showing at least 20 years with at least 50 days per year of valid data are shown.
+</p>
+
+<p>
+Click on a station to access interactive time series,
+historical comparisons and operational weather forecast products.
+</p>
+
+<hr>
+
+<b>Related resources</b>
+
+<br>
+
+&#128293;
+<a href="https://cwfis.cfs.nrcan.gc.ca/en/" target="_blank">
+Canadian Wildland Fire Information System (CWFIS)
+</a>
+
+<br>
+
+&#128293;
+<a href="https://natural-resources.canada.ca/forests-forestry/wildland-fires/canada-fire-weather-index-system"
+target="_blank">
+About the Canadian Fire Weather Index System
+</a>
+
+<br>
+
+&#127783;
+<a href="https://feux.escer.uqam.ca/"
+target="_blank">
+Tracking and monitoring of fire danger in Canada (ESCER-UQAM)
+</a>
+
+<hr>
+
+<h4>Contact</h4>
+
+<p>
+Questions, comments, bug reports, or suggestions are welcome.
+</p>
+
+<p>
+
+<a href="mailto:yan.boulanger@nrcan.gc.ca">
+yan.boulanger@nrcan.gc.ca
+</a>
+</p>
+</div>
+
+<div id="indicesPanel" class="popup-panel">
+
+<h3>Fire Weather Index</h3>
+
+<p>
+The Canadian Fire Weather Index (FWI) system is used across Canada
+to estimate fire danger from weather observations.
+</p>
+
+<ul>
+
+<li><b>FFMC</b> (Fine Fuel Moisture Code)<br>
+Moisture content of surface litter and fine fuels. Higher values indicate easier ignition, notably for human-caused fires.</li>
+
+<li><b>DMC</b> (Duff Moisture Code)<br>
+Moisture content of shallow organic layers. Higher values indicate drier fuels and greater fuel consumption. Good indicator for lightning-caused fires</li>
+
+<li><b>DC</b> (Drought Code)<br>
+Moisture content of deep organic layers. Represents long-term drought conditions.</li>
+
+<li><b>ISI</b> (Initial Spread Index)<br>
+Potential rate of fire spread based on wind and fine fuel moisture.</li>
+
+<li><b>BUI</b> (Build-Up Index)<br>
+Amount of fuel available for combustion.</li>
+
+<li><b>FWI</b> (Fire Weather Index)<br>
+Overall indicator of potential fire danger.</li>
+
+</ul>
+
+<p style="font-size:12px;color:white;">
+Higher values generally indicate more severe fire weather conditions.
+</p>
+
+</div>
+
+<div id="loading">
+
+Loading map...
+
+<br>
+
+<span style="font-size:14px;color:#bbbbbb;">
+This may take 10–20 seconds.
+</span>
+
+</div>
+
+<iframe
+    id="mapFrame"
+    loading="lazy"
+    src="">
+</iframe>
+
+
+<script>
+
+function loadMap(path){
+
+  document.getElementById("mapFrame").src = path;
+
+  document.getElementById("calendarPanel").style.display = "none";
+
+  document.getElementById("monthlyPanel").style.display = "none";
+}
+
+const calendarButton =
+  document.getElementById("calendarButton");
+
+const calendarPanel =
+  document.getElementById("calendarPanel");
+
+const monthlyButton =
+  document.getElementById("monthlyButton");
+
+const monthlyPanel =
+  document.getElementById("monthlyPanel");
+
+monthlyButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    calendarPanel.style.display = "none";
+    aboutPanel.style.display = "none";
+    indicesPanel.style.display = "none"; 
+
+    monthlyPanel.style.display =
+      monthlyPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+const indicesButton =
+  document.getElementById("indicesButton");
+
+const indicesPanel =
+  document.getElementById("indicesPanel");
+
+const aboutButton =
+  document.getElementById("aboutButton");
+
+const aboutPanel =
+  document.getElementById("aboutPanel");
+
+calendarButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    aboutPanel.style.display = "none";
+    monthlyPanel.style.display = "none";
+    indicesPanel.style.display = "none"; 
+
+    calendarPanel.style.display =
+      calendarPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+indicesButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    calendarPanel.style.display = "none";
+    monthlyPanel.style.display = "none";
+    aboutPanel.style.display = "none";
+
+    indicesPanel.style.display =
+      indicesPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+window.addEventListener("load", function(){
+
+    var frame=document.getElementById("mapFrame");
+
+    frame.onload=function(){
+
+        document.getElementById("loading").style.display="none";
+
+        frame.style.display="block";
+
+    };
+
+  frame.src = "archives/2026-08-07/FWI_record_map_20260807.html";
+
+});
+
+
+aboutButton.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+    calendarPanel.style.display = "none";
+    monthlyPanel.style.display = "none";
+    indicesPanel.style.display = "none";     
+
+    aboutPanel.style.display =
+      aboutPanel.style.display === "block"
+      ? "none"
+      : "block";
+  }
+);
+
+document.addEventListener(
+  "click",
+  function(event){
+
+ if(
+   !indicesPanel.contains(event.target) &&
+   !indicesButton.contains(event.target)
+ ){
+   indicesPanel.style.display = "none";
+ }
+
+ if(
+  !calendarPanel.contains(event.target) &&
+  !calendarButton.contains(event.target)
+){
+  calendarPanel.style.display = "none";
+}
+
+if(
+  !monthlyPanel.contains(event.target) &&
+  !monthlyButton.contains(event.target)
+){
+  monthlyPanel.style.display = "none";
+}
+
+if(
+  !aboutPanel.contains(event.target) &&
+  !aboutButton.contains(event.target)
+){
+  aboutPanel.style.display = "none";
+}
+  }
+);
+
+</script>
+
+</body>
+
+</html>
